@@ -2,7 +2,7 @@ document.querySelector('form').addEventListener('submit', (e)=>{
     e.preventDefault()
     let text = document.getElementById("text").value
     let outPutText = ""
-    if(text.length <= 3)
+    if(text.length < 3)
     {
         outPutText = text.toUpperCase()
     }
@@ -10,7 +10,7 @@ document.querySelector('form').addEventListener('submit', (e)=>{
     {
         for(let i = 0; i < 3; i++)
         {
-            outPutText += text[i].toUpperCase()
+            outPutText += text[i].toLowerCase()
         }
         outPutText += text.slice(3)
     }
